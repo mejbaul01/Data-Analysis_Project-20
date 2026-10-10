@@ -1,0 +1,34 @@
+Day_21
+create table Slaes(
+	OrderID int Primary key,
+    CustomerName Varchar(50),
+    City Varchar(50),
+    ProductName Varchar(50),
+    Amount Decimal(10,2)
+
+);
+
+
+alter table slaes
+rename to Sales;
+
+insert into sales
+values
+(101,"Abul Hayat","Chittagong","Laptop",27000),
+(102,'Rahim','Khulna','Laptop',50000),
+(103,'Karim','Dhaka','Mouse',1000),
+(104,'Rahim','Chittagong','Laptop',50000),
+(105,'Hasan','Khulna','Printer',15000),
+(106,'Karim','Dhaka','Laptop',50000);
+
+Explain
+select * from Sales
+where city= 'Dhaka'
+and productName='Laptop';
+
+create index idx_city_prod
+on sales(City, ProductName)
+
+
+
+
